@@ -16,6 +16,6 @@ export class NavComponent implements OnInit {
   }
 
   toggleMenu() {
-    this.activeMenu = !this.activeMenu!
+    this.activeMenu = !this.activeMenu;
   }
 }
