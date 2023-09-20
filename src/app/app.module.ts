@@ -9,6 +9,8 @@ import { ImgComponent } from './components/img/img.component';
 import { ProductComponent } from './components/product/product.component';
 import { ProductsComponent } from './components/products/products.component';
 import { NavComponent } from './components/nav/nav.component';
+import { ReversePipe } from './pipes/reverse.pipe';
+import { TimeAgoPipe } from './pipes/time-ago.pipe';
 
 @NgModule({
   declarations: [
@@ -16,11 +18,14 @@ import { NavComponent } from './components/nav/nav.component';
     ImgComponent,
     ProductComponent,
     ProductsComponent,
-    NavComponent
+    NavComponent,
+    ReversePipe,
+    TimeAgoPipe
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    HttpClientModule,
     AppRoutingModule
   ],
   providers: [],
