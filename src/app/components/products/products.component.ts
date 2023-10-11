@@ -13,6 +13,7 @@ export class ProductsComponent {
   myShoppingCart: Product[] = [];
   total = 0;
   products: Product[] = [];
+  showProductDetail = false;
   today = new Date();
   date = new Date(2021, 1, 21);
 
@@ -33,6 +34,18 @@ export class ProductsComponent {
   onAddToShoppingCart(product: Product){
     this.StoreService.addProduct(product);
     this.total = this.StoreService.getTotal();
+  }
+
+  toggleProductDetail() {
+    this.showProductDetail = !this.showProductDetail
+  }
+
+  onShowDetail(id: string) {
+    this.productsService.getProduct(id)
+    .subscribe(data => {
+      console.log('product', data);
+    })
+
   }
 
 }
